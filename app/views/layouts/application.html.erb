@@ -13,11 +13,15 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <title>Khoa Le | Home</title>
+    <title>Friend List | Home</title>
   </head>
   <body>
       <%= render 'home/header'%>
       <div class="container">
+       <br/>
+        <% if notice%>
+            <%= render 'layouts/alert'%>
+        <% end %>
         </br>
         <%= yield %>
       </div>
